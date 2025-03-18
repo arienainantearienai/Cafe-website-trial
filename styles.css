@@ -9,8 +9,8 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #f5efe6;
+    color: #3d2c1e;
     padding: 15px 0;
 }
 
@@ -30,20 +30,43 @@ nav ul li a {
 }
 
 #hero {
-    padding: 50px;
-    background: url('coffee.jpg') no-repeat center/cover;
+    background: url('coffee.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #ff6600;
+    background-color: #d2691e; /* キャラメルブラウン */
     color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
     border: none;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #a0522d;
 }
 
 #reviews {
     background-color: white;
     padding: 20px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
